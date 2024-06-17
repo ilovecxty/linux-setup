@@ -17,10 +17,13 @@ install_new() {
 }
 
 check_version() {
+	echo "-----$1-----"
+    	shift
 	# check_version "${shell[@]}"
 	for element in "$@"; do
 		$element --version
 	done
+ 	echo "-----$1 END-----\n"
 }
 
 # shell tool
@@ -48,7 +51,8 @@ pkgmanager=("yay" "paru")
 # code
 ide=("vscode")
 ide_plus=("qtcreator")
-cpp=("make" "cmake" "llvm" "clang")
+cpp=("make" "cmake" "llvm" "clang" "gcc")
+python=("python3" "pip" "conda")
 # purify
 font=("ttf-cascadia-mono-nerd" "ttf-cascadia-code-nerd")
 font_plus=("ttf-sarasa-gothic")
@@ -58,6 +62,13 @@ install_basic() {
 	echo "${shell[@]}" "${shellsetup[@]}" "${shelltool[@]}" "${editor[@]}" "${gittool[@]}" "${filemanager[@]}"
 	sudo pacman -S "${shell[@]}" "${shellsetup[@]}" "${shelltool[@]}"
 	sudo pacman -S "${editor[@]}" "${gittool[@]}" "${filemanager[@]}"
+}
+
+check_basic(){
+echo "Check packages: "
+	echo "${shell[@]}" "${shellsetup[@]}" "${shelltool[@]}" "${editor[@]}" "${gittool[@]}" "${filemanager[@]}"
+	check_version "${shell[@]}" "${shellsetup[@]}" "${shelltool[@]}"
+	check_version "${editor[@]}" "${gittool[@]}" "${filemanager[@]}"
 }
 
 ######## SHRC INSTALL #########
@@ -119,3 +130,4 @@ install_lunarvim() {
 }
 
 install_basic
+check_basic
