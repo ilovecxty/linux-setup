@@ -33,6 +33,7 @@ git clone https://github.com/mbadolato/iTerm2-Color-Schemes.git
 git clone https://github.com/chriskempson/tomorrow-theme.git
 git clone https://github.com/sonph/onehalf.git
 cd ..
+#git clone --depth=1 https://github.com/Bash-it/bash-it.git ~/.bash_it
 # vim
 mkdir color-vim
 cd color-vim
@@ -44,6 +45,11 @@ git clone https://github.com/altercation/vim-colors-solarized.git
 git clone https://github.com/folke/tokyonight.nvim.git
 git clone https://github.com/catppuccin/nvim.git
 cd ..
+
+#git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
+#git clone https://github.com/LazyVim/starter
+#git clone https://github.com/NvChad/starter
+
 #qt
 mkdir color-qt
 cd color-qt
