@@ -56,6 +56,7 @@ python=("python3" "pip" "conda")
 # purify
 font=("ttf-cascadia-mono-nerd" "ttf-cascadia-code-nerd")
 font_plus=("ttf-sarasa-gothic")
+game=("dwarf-fortress golly the-powder-toy")
 
 install_basic() {
 	echo "Install packages: "
